@@ -161,7 +161,7 @@ insert into Professor(id, RG, CPF, titulacao) values (120, "34.863.952-99", "678
 
 /* Escola (6 escolas)*/
 insert into Escola(nome, cidade_id, diretor_id) values ("Colégio Pedro II", 1, 40);
-insert into Escola(nome, cidade_id, diretor_id) values ("Colégio Evolução", 2, 39);
+insert into Escola(nome, cidade_id, diretor_id) values ("Colégio MV1", 2, 39);
 insert into Escola(nome, cidade_id, diretor_id) values ("Colégio Evolução", 3, 38);
 
 /* Turma (9 turmas)*/
@@ -456,20 +456,17 @@ insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(80, 5
 insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(116, 1, 7);
 insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(116, 1, 8);
 insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(116, 1, 9);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(116, 2, 7);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(116, 2, 8);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(116, 2, 9);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(117, 3, 7);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(117, 3, 8);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(117, 3, 9);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(118, 4, 7);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(118, 4, 8);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(118, 4, 9);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(119, 5, 7);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(119, 5, 8);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(119, 5, 9);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(120, 6, 7);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(120, 6, 8);
-insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(120, 6, 9);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(117, 2, 7);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(117, 2, 8);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(117, 2, 9);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(118, 3, 7);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(118, 3, 8);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(118, 3, 9);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(119, 4, 7);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(119, 4, 8);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(119, 4, 9);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(120, 5, 7);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(120, 5, 8);
+insert into Turma_Ministrada(professor_id, disciplina_id, turma_id) values(120, 5, 9);
 
 
