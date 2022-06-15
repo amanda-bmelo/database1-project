@@ -1,9 +1,8 @@
-# database1-project
-A small group project developed for academic purposes with a focus on improving knowledge of SQL and basic database concepts.
+# Projeto de Banco de Dados 1
 
-Projeto Lógico
+## Projeto Lógico
 
-  Cidade (id, nome)
+  ```Cidade (id, nome)
 
   Pessoa (id, nome, telefone, cidade_id)
       cidade_id referencia Cidade
