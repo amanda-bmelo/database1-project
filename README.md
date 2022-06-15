@@ -1,8 +1,9 @@
 # Projeto de Banco de Dados 1
 
-## Projeto Lógico
+### Projeto Lógico
 
-  ```Cidade (id, nome)
+  ```
+  Cidade (id, nome)
 
   Pessoa (id, nome, telefone, cidade_id)
       cidade_id referencia Cidade
@@ -34,3 +35,4 @@
       turma_id referencia Turma
       professor_id referencia Ministra (professor_id)
       disciplina_id referencia Ministra(disciplina_id)
+```
