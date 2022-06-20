@@ -1,50 +1,50 @@
 -- 2
-select P.nome,A.matricula
-from Aluno A,Pessoa P
-where A.id = P.id AND A.id NOT IN (select C.aluno_id from contato C);
+SELECT P.nome,A.matricula
+FROM Aluno A,Pessoa P
+WHERE A.id = P.id AND A.id NOT IN (SELECT C.Aluno_id FROM Contato C);
 
 -- 3
-select T.id,T.nome
-from Turma T,Aluno A
-where A.turma_id = T.id
-group by T.id
-having count(A.id)>5;
+SELECT T.id,T.nome
+FROM Turma T,Aluno A
+WHERE A.turma_id = T.id
+GROUP BY T.id
+HAVING count(A.id)>5;
 
 -- 4
-select F.id,P.nome,F.titulacao
-from professor F, pessoa P,turma_ministrada M,ministra N,turma T
-where F.id = P.id AND F.id = M.professor_id AND N.professor_id = M.professor_id AND T.id = M.turma_id
-group by F.id
-having count(P.nome)>=3;
+SELECT F.id,P.nome,F.titulacao
+FROM Professor F, Pessoa P,Turma_Ministrada M,Ministra N,Turma T
+WHERE F.id = P.id AND F.id = M.Professor_id AND N.Professor_id = M.Professor_id AND T.id = M.turma_id
+GROUP BY F.id
+HAVING count(P.nome)>=3;
 
 -- 7
 
-SELECT E.nome, COUNT(DISTINCT TM.turma_id), COUNT(DISTINCT TM.professor_id)
-FROM Escola E JOIN Turma T on E.id = T.escola_id
-              JOIN Turma_Ministrada TM on T.id = TM.turma_id
-              JOIN Professor P on TM.professor_id = P.id
+SELECT E.nome, COUNT(DISTINCT TM.turma_id), COUNT(DISTINCT TM.Professor_id)
+FROM Escola E JOIN Turma T ON E.id = T.escola_id
+              JOIN Turma_Ministrada TM ON T.id = TM.turma_id
+              JOIN Professor P ON TM.Professor_id = P.id
 GROUP BY E.nome;
 
 -- 8
 
-SELECT E.nome, COUNT(DISTINCT A.id)/COUNT(DISTINCT TM.professor_id) as 'aluno/professor'
-FROM Escola E JOIN Turma T on E.id = T.escola_id
-              JOIN Turma_Ministrada TM on T.id = TM.turma_id
-              JOIN Professor P on TM.professor_id = P.id
-              JOIN Aluno A on TM.turma_id = A.turma_id
+SELECT E.nome, COUNT(DISTINCT A.id)/COUNT(DISTINCT TM.Professor_id) as 'Aluno/Professor'
+FROM Escola E JOIN Turma T ON E.id = T.escola_id
+              JOIN Turma_Ministrada TM ON T.id = TM.turma_id
+              JOIN Professor P ON TM.Professor_id = P.id
+              JOIN Aluno A ON TM.turma_id = A.turma_id
 GROUP BY E.nome;
 
 -- 9
-SELECT matricula, pessoa.nome NomeAluno, contato.nome NomeContato, contato.telefone TelefoneContato 
-FROM aluno, pessoa, contato 
-WHERE aluno.id = pessoa.id AND aluno.id = contato.aluno_id
-ORDER BY aluno.matricula, NomeContato;
+SELECT matricula, Pessoa.nome NomeAluno, Contato.nome NomeContato, Contato.telefone TelefoneContato
+FROM Aluno, Pessoa, Contato
+WHERE Aluno.id = Pessoa.id AND Aluno.id = Contato.Aluno_id
+ORDER BY Aluno.matricula, NomeContato;
 
 -- 10
-SELECT professor.id,nome, telefone, RG, CPF, titulacao, cidade_id 
-FROM pessoa, professor 
-WHERE professor.id in 
-    (SELECT professor_id TurmasMinistradas FROM turma_ministrada
-    GROUP BY professor_id
-    HAVING count(*) =1) 
-AND pessoa.id = professor.id;
+SELECT Professor.id,nome, telefone, RG, CPF, titulacao, cidade_id
+FROM Pessoa, Professor
+WHERE Professor.id in
+    (SELECT Professor_id TurmasMinistradas FROM Turma_Ministrada
+    GROUP BY Professor_id
+    HAVING count(*) =1)
+AND Pessoa.id = Professor.id;

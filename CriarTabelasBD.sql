@@ -41,7 +41,6 @@ create table Disciplina(
     nome varchar(20) not null,
 	primary key(id)
 );
-76
 create table Turma(
 	id int auto_increment,
     nome varchar(20) not null,
