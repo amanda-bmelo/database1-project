@@ -1,3 +1,22 @@
+-- 2
+select P.nome,A.matricula
+from Aluno A,Pessoa P
+where A.id = P.id AND A.id NOT IN (select C.aluno_id from contato C);
+
+-- 3
+select T.id,T.nome
+from Turma T,Aluno A
+where A.turma_id = T.id
+group by T.id
+having count(A.id)>5;
+
+-- 4
+select F.id,P.nome,F.titulacao
+from professor F, pessoa P,turma_ministrada M,ministra N,turma T
+where F.id = P.id AND F.id = M.professor_id AND N.professor_id = M.professor_id AND T.id = M.turma_id
+group by F.id
+having count(P.nome)>=3;
+
 -- 7
 
 SELECT E.nome, COUNT(DISTINCT TM.turma_id), COUNT(DISTINCT TM.professor_id)
