@@ -1,5 +1,2 @@
 IMPORT.txt
-database1-project.iml
-dataSources.xml
-modules.xml
-vcs.xml
+.idea
