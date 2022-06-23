@@ -1,3 +1,12 @@
+-- 1
+SELECT e.nome, c.nome 
+FROM Cidade c, Escola e 
+WHERE e.cidade_id=c.id AND e.id NOT IN 
+        (SELECT e.id 
+        FROM Aluno a, Pessoa p, Escola e, Turma t 
+        WHERE a.id=p.id AND p.cidade_id!=e.cidade_id 
+        AND a.turma_id=t.id AND t.escola_id = e.id);
+
 -- 2
 SELECT P.nome,A.matricula
 FROM Aluno A,Pessoa P
@@ -55,7 +64,7 @@ ORDER BY Aluno.matricula, NomeContato;
 -- 10
 SELECT Professor.id,nome, telefone, RG, CPF, titulacao, cidade_id
 FROM Pessoa, Professor
-WHERE Professor.id in
+WHERE Professor.id IN
     (SELECT Professor_id TurmasMinistradas FROM Turma_Ministrada
     GROUP BY Professor_id
     HAVING count(*) =1)

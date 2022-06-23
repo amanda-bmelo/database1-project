@@ -1,4 +1,4 @@
--- create schema ESCOLAS;
+create schema ESCOLAS;
 
 use ESCOLAS;
 
