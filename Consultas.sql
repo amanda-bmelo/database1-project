@@ -1,5 +1,5 @@
 -- 1
-SELECT e.nome, c.nome 
+SELECT e.nome, c.nome cidade
 FROM Cidade c, Escola e 
 WHERE e.cidade_id=c.id AND e.id NOT IN 
         (SELECT e.id 
@@ -27,16 +27,15 @@ GROUP BY F.id
 HAVING count(P.nome)>=3;
 
 -- Ex 5
-select Disciplina.nome,count(*) , count(distinct prof.id)
-from Professor prof, Disciplina, Turma_Ministrada tmin
-where tmin.professor_id = prof.id and
-		tmin.disciplina_id = Disciplina.id
-        group by disciplina_id;
+SELECT Disciplina.nome, count(*) QuantMax , count(DISTINCT prof.id) QuantReal 
+FROM Professor prof, Disciplina, Turma_ministrada tmin
+WHERE tmin.professor_id = prof.id AND tmin.disciplina_id = disciplina.id
+GROUP BY disciplina_id;
 
 -- Ex 6
-select E.nome,P.nome
-from Escola E, Pessoa P, Cidade C
-where E.cidade_id = C.id AND P.id = E.diretor_id AND P.cidade_id != E.cidade_id;
+SELECT E.nome,P.nome
+FROM Escola E, Pessoa P, Cidade C
+WHERE E.cidade_id = C.id AND P.id = E.diretor_id AND P.cidade_id != E.cidade_id;
 
 -- 7
 
