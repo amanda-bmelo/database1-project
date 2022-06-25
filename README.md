@@ -1,6 +1,6 @@
 # Projeto de Banco de Dados 1
 
-Alunos: Amanda Melo, Igor Monardez Israel Navarro e Luiz Torre
+Alunos: Amanda Melo, Igor Monardez, Israel Navarro e Luiz Torre
 
 ## Modelagem de Dados
 
