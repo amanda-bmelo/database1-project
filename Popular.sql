@@ -305,6 +305,7 @@ insert into Aluno(id, matricula, data_nasc, turma_id) values (115, "020.180.558"
 /* Contato (85 alunos) */
 -- Niterói
 insert into Contato(aluno_id, nome, telefone) values (1, "Amanda Gibbs","(21)96150-1527");
+insert into Contato(aluno_id, nome, telefone) values (1, "João Guilherme Costa","(21)97412-2598");
 insert into Contato(aluno_id, nome, telefone) values (2, "David Scott","(21)95181-5019");
 insert into Contato(aluno_id, nome, telefone) values (3, "Angela Bell","(21)98151-3194");
 insert into Contato(aluno_id, nome, telefone) values (4, "Cassandra Davis","(21)91759-9324");
