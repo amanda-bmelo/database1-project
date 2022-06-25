@@ -66,7 +66,9 @@
 
 
 5) Listar por disciplina o número de professores que podem ministrá-la e quantos efetivamente ministram a mesma para uma turma.
+
 ![questao5](/images/5.jpeg)
+
 
 6) Listar o nome da escola e o nome dos diretores de escola que residem em cidades diferentes da cidade da escola.
 
